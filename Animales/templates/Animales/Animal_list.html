@@ -1,14 +1,21 @@
 <!DOCTYPE html>
-<html>
-    <head></head>
-    <body>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Trabajo Animales</title>
+    <!-- Importar Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
     <h1>Animales</h1>
 
     {% for animal in animal_mostrar %}
     <article>
-        <h2><a href="">{{ animal.nombre}}</a> <a href="">{{ animal.tipo}}</a></h2>
+        <h2><a href="">Cuidador: {{ animal.cuidador}}</a></h2>
+        <h2><a href="">Nombre: {{ animal.nombre}}</a></h2>
+        <h2><a href="">Tipo:{{ animal.tipo}}</a></h2>
         <p>{{ animal.text|linebreaksbr }}</p>
         </article>
     {% endfor %}
-
-    </body>
+</body>
+</html>
