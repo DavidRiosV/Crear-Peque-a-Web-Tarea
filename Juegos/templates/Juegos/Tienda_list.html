@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Trabajo Animales</title>
+    <!-- Importar Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Tienda</h1>
+
+    {% for tienda in tienda_mostrar %}
+    <article>
+        <h2><a href="">Nombre: {{ tienda.nombre}}</a></h2>
+        <h3><a href="">Descripcion: {{ tienda.descripcion}}</a></h3>
+        <h3><a href="">Creacion:{{ tienda.fecha_creacion}}</a></h3>
+        <p>{{ tienda.text|linebreaksbr }}</p>
+        </article>
+    {% endfor %}
+</body>
+</html>

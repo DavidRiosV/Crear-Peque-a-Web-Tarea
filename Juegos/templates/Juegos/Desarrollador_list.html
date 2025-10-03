@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Trabajo Animales</title>
+    <!-- Importar Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Desarrollador</h1>
+
+    {% for desarrollador in desarrollador_mostrar %}
+    <article>
+        <h2><a href="">Nombre: {{ desarrollador.nombre}}</a></h2>
+        <h3><a href="">Descripcion: {{ desarrollador.descripcion}}</a></h3>
+        <h3><a href="">Creacion:{{ desarrollador.fecha_creacion}}</a></h3>
+        <p>{{ desarrollador.text|linebreaksbr }}</p>
+        </article>
+    {% endfor %}
+</body>
+</html>
